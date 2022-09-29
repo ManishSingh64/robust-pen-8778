@@ -2,12 +2,14 @@ import './App.css';
 import SideBar from './components/Sidebar/SideBar';
 import { Routes, Route } from 'react-router-dom';
 
+import { TimeTracker } from './pages/TimeTracker/TimeTracker';
+
 function App() {
   return (
     <div className="App">
       <SideBar>
         <Routes>
-          {/* <Route path="/tracker" element={<TimeTracker />} /> */}
+          <Route path="/tracker" element={<TimeTracker />} />
           {/* <Route path="/calendar" element={<Calendar />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/reports" element={<Reports />} />
