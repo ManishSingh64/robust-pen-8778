@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import SideBar from './components/Sidebar/SideBar';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SideBar>
+        <Routes>
+          {/* <Route path="/tracker" element={<TimeTracker />} /> */}
+          {/* <Route path="/calendar" element={<Calendar />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route path="/team" element={<Team />} />          
+          <Route path="/clients" element={<Clients />} />          
+          <Route path="/projects" element={<Projects />} />          
+          <Route path="/tags" element={<Tags />} />          
+          <Route path="/timesheet" element={<TimeSheet />} />          
+          <Route path="/settings" element={<Settings />} /> */}
+
+          <Route path="*" element={<> not found</>} />
+        </Routes>
+      </SideBar>
     </div>
   );
 }
