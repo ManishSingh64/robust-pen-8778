@@ -5,7 +5,6 @@ import { Timer } from "../../Components/timeTracker/Timer";
 export const TimeTracker = () => {
   return (
     <div>
-      <SideBar />
       <Timer />
     </div>
   );

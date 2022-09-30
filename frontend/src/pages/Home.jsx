@@ -268,7 +268,6 @@ const Home = () => {
   ];
   return (
     <div>
-      <Navbar />
       <Box maxW={["", "80%"]} m={"auto"}>
         <Text fontSize={["2xl", "4xl"]} textAlign={"center"} fontWeight={400}>
           The most popular free{" "}
@@ -965,7 +964,6 @@ const Home = () => {
           </Text>
         </Button>
       </Flex>
-      <Footer />
     </div>
   );
 };
