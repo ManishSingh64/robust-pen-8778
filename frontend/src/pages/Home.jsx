@@ -1,18 +1,7 @@
-// import React from 'react'
-
-// const Home = () => {
-//   return (
-//     <div>Home</div>
-//   )
-// }
-
-// export default Home
-
 import {
   Box,
   Button,
   ButtonGroup,
-  Center,
   Divider,
   Flex,
   Heading,
@@ -36,8 +25,7 @@ import { RiTeamLine } from "react-icons/ri";
 import { BsClockHistory } from "react-icons/bs";
 import { GiCheckMark } from "react-icons/gi";
 import Testimonials from "../Components/Testimonials";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
+
 
 export const ClockyCards = ({ icon, heading, text }) => {
   return (
