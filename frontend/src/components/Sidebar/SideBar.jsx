@@ -209,8 +209,7 @@ const SideBar = ({ children }) => {
             })}
           </section>
         </motion.div>
-
-        <main style={{ border: "1px solid black" }}>{children}</main>
+        <main>{children}</main>
       </div>
     </>
   );
