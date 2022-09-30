@@ -14,10 +14,9 @@ import { RiTeamLine } from "react-icons/ri";
 import { MdOutlineDashboardCustomize } from "react-icons/md";
 import { AiOutlineClockCircle, AiOutlineSetting } from "react-icons/ai";
 
-
-import './slidebar.css';
+import "./slidebar.css";
 import { Navbar } from "../navbar/Navbar";
-import clockify_logo from '../../assets/clockify-logo.svg'
+import clockify_logo from "../../assets/clockify-logo.svg";
 
 const routes = [
   {
@@ -42,26 +41,26 @@ const routes = [
     subRoutes: [
       {
         path: "/summary",
-        name: "Summary"
+        name: "Summary",
       },
       {
         path: "/detailed",
-        name: "Detailed"
+        name: "Detailed",
       },
       {
         path: "/weekly",
-        name: "Weekly"
+        name: "Weekly",
       },
       {
         path: "/shared",
-        name: "Shared"
-      }
-    ]
+        name: "Shared",
+      },
+    ],
   },
   {
     path: "/team",
     name: "TEAM",
-    icon: <RiTeamLine />    
+    icon: <RiTeamLine />,
   },
   {
     path: "/clients",
@@ -71,7 +70,7 @@ const routes = [
   {
     path: "/projects",
     name: "PROJECTS",
-    icon: <CgNotes />,        
+    icon: <CgNotes />,
   },
   {
     path: "/tags",
@@ -90,44 +89,43 @@ const routes = [
   },
   {
     path: "/showmore",
-    name: "SHOW MORE",    
+    name: "SHOW MORE",
     subRoutes: [
       {
         path: "/kiosks",
-        name: "KIOSKS"
+        name: "KIOSKS",
       },
       {
         path: "/schedul",
-        name: "SCHEDULE"
+        name: "SCHEDULE",
       },
       {
         path: "/expenses",
-        name: "EXPENSES"
+        name: "EXPENSES",
       },
       {
         path: "/timeoff",
-        name: "TIME OFF"
+        name: "TIME OFF",
       },
       {
         path: "/activity",
-        name: "ACTIVITY"
+        name: "ACTIVITY",
       },
       {
         path: "/approvals",
-        name: "APPROVALS"
+        name: "APPROVALS",
       },
       {
         path: "/invoices",
-        name: "INVOICES"
-      }
-    ]
+        name: "INVOICES",
+      },
+    ],
   },
 ];
 
 const SideBar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-  
 
   const showAnimation = {
     hidden: {
@@ -148,15 +146,15 @@ const SideBar = ({ children }) => {
 
   return (
     <>
-      <div className="top_section">          
-            <div className="bars">
-              <FaBars onClick={toggle} />
-              <img src={clockify_logo} alt='clockify_logo' />
-            </div> 
+      <div className="top_section">
+        <div className="bars">
+          <FaBars onClick={toggle} />
+          <img src={clockify_logo} alt="clockify_logo" />
+        </div>
 
-            <div>
-              <Navbar/>
-            </div>         
+        <div>
+          <Navbar />
+        </div>
       </div>
 
       <div className="main-container">
@@ -169,12 +167,12 @@ const SideBar = ({ children }) => {
               damping: 20,
             },
           }}
-          className='sidebar'
+          className="sidebar"
         >
           <section className="routes">
             {routes.map((route, index) => {
               if (route.subRoutes) {
-                return ( 
+                return (
                   <SidebarMenu
                     key={index}
                     setIsOpen={setIsOpen}
@@ -212,7 +210,7 @@ const SideBar = ({ children }) => {
           </section>
         </motion.div>
 
-        <main>{children}</main>
+        <main style={{ border: "1px solid black" }}>{children}</main>
       </div>
     </>
   );
