@@ -7,7 +7,6 @@ import Home from "../pages/Home";
 import { TimeTracker } from "../pages/TimeTracker/TimeTracker";
 import { Calender } from "../pages/Calender/Calender";
 
-
 export const AllRoutes = () => {
   return (
     <div className="App">
