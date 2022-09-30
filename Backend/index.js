@@ -5,6 +5,8 @@ const dotenv = require("dotenv");
 const { default: mongoose } = require("mongoose");
 const authentication = require("./Middleware/Authentication");
 const userController = require("./Controllers/user.routes");
+const projectController = require("./Controllers/project.routes");
+const taskController = require("./Controllers/task.routes");
 dotenv.config();
 app.use(cors());
 app.use(express.json());
@@ -15,6 +17,7 @@ app.get("/", (req, res) => {
 
 app.use("/", userController);
 app.use("/project", authentication, projectController);
+app.use('/task',authentication, taskController)
 
 app.listen(process.env.PORT, async () => {
   try {
