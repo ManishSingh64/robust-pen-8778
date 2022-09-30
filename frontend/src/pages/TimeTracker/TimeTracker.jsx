@@ -19,8 +19,8 @@ import { IoIosAddCircleOutline } from "react-icons/io";
 import { BsTag } from "react-icons/bs";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { EmptyBox } from "../../Components/timetracker/EmptyBox";
-import TrackerShower from "../../Components/timetracker/TrackerShower";
+import { EmptyBox } from "../../components/timetracker/EmptyBox";
+import TrackerShower from "../../components/timetracker/TrackerShower";
 
 
 export const TimeTracker = () => {
