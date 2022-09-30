@@ -36,6 +36,8 @@ import { RiTeamLine } from "react-icons/ri";
 import { BsClockHistory } from "react-icons/bs";
 import { GiCheckMark } from "react-icons/gi";
 import Testimonials from "../Components/Testimonials";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 export const ClockyCards = ({ icon, heading, text }) => {
   return (
@@ -266,6 +268,7 @@ const Home = () => {
   ];
   return (
     <div>
+      <Navbar />
       <Box maxW={["", "80%"]} m={"auto"}>
         <Text fontSize={["2xl", "4xl"]} textAlign={"center"} fontWeight={400}>
           The most popular free{" "}
@@ -962,6 +965,7 @@ const Home = () => {
           </Text>
         </Button>
       </Flex>
+      <Footer />
     </div>
   );
 };
