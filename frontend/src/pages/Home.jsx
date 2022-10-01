@@ -31,7 +31,6 @@ import Testimonials from "../components/Testimonials";
 export const ClockyCards = ({ icon, heading, text }) => {
   return (
     <Box
-      // border={"10px solid crimson"}
       m="auto"
       w="85%"
       pt="40px"
