@@ -7,6 +7,8 @@ import Home from "../pages/Home";
 import { TimeTracker } from "../pages/TimeTracker/TimeTracker";
 import { Calender } from "../pages/Calender/Calender";
 import Pricing from "../Components/Premium/Pricing";
+import Login from "../Components/Login/Login";
+import CheckAuth from "../Components/Login/CheckAuth";
 
 export const AllRoutes = () => {
   return (
@@ -15,6 +17,14 @@ export const AllRoutes = () => {
         <Route element={<Simple />}>
           <Route path="/" element={<Home />} />
         </Route>
+        <Route
+          path="/login"
+          element={
+            <CheckAuth>
+              <Login />
+            </CheckAuth>
+          }
+        />
         <Route element={<Protected />}>
           <Route path="/tracker" element={<TimeTracker />} />
           <Route path="/calendar" element={<Calender />} />
