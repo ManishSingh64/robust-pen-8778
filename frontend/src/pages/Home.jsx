@@ -1,19 +1,8 @@
-// import React from 'react'
-
-// const Home = () => {
-//   return (
-//     <div>Home</div>
-//   )
-// }
-
-// export default Home
-
 import {
   AspectRatio,
   Box,
   Button,
   ButtonGroup,
-  Center,
   Divider,
   Flex,
   Heading,
@@ -37,9 +26,7 @@ import { AiOutlineDollarCircle } from "react-icons/ai";
 import { RiTeamLine } from "react-icons/ri";
 import { BsClockHistory } from "react-icons/bs";
 import { GiCheckMark } from "react-icons/gi";
-import Testimonials from "../Components/Testimonials";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
+import Testimonials from "../components/Testimonials";
 
 export const ClockyCards = ({ icon, heading, text }) => {
   return (
@@ -924,7 +911,6 @@ const Home = () => {
           </Text>
         </Button>
       </Flex>
-      <Footer />
     </div>
   );
 };

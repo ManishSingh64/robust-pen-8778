@@ -15,7 +15,7 @@ import { MdOutlineDashboardCustomize } from "react-icons/md";
 import { AiOutlineClockCircle, AiOutlineSetting } from "react-icons/ai";
 
 import "./slidebar.css";
-import { Navbar } from "../navbar/Navbar";
+// import { Navbar } from "../navbar/Navbar";
 import clockify_logo from "../../assets/clockify-logo.svg";
 
 const routes = [
@@ -152,9 +152,7 @@ const SideBar = ({ children }) => {
           <img src={clockify_logo} alt="clockify_logo" />
         </div>
 
-        <div>
-          <Navbar />
-        </div>
+        <div>{/* <Navbar /> */}</div>
       </div>
 
       <div className="main-container">
@@ -209,7 +207,6 @@ const SideBar = ({ children }) => {
             })}
           </section>
         </motion.div>
-
         <main>{children}</main>
       </div>
     </>
