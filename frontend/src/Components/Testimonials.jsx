@@ -11,7 +11,7 @@ const Testimonials = ({ data, direction }) => {
           h="160px"
           p="15px"
           m={2}
-          id={elem.id}
+          key={elem.id}
           boxShadow="0 2px 6px 0 rgb(1 87 155 / 20%)"
           alignItems="flex-start"
           flexDir="column"

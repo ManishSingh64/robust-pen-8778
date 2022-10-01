@@ -668,7 +668,7 @@ const Home = () => {
         {whyClockify.map((ele) => {
           return (
             <ClockyCards
-              id={ele.id}
+              key={ele.id}
               icon={ele.icon}
               heading={ele.heading}
               text={ele.text}
