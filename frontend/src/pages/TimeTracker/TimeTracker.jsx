@@ -1,6 +1,6 @@
 import React from "react";
-import SideBar from "../../Components/Sidebar/SideBar";
-import { Timer } from "../../Components/timeTracker/Timer";
+import SideBar from "../../components/Sidebar/SideBar";
+import { Timer } from "../../components/timeTracker/Timer";
 
 export const TimeTracker = () => {
   return (
