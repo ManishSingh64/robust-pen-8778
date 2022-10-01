@@ -1,10 +1,10 @@
 import React from "react";
 // import SideBar from "../../Components/Sidebar/SideBar";
-import { Timer } from "../../Components/timeTracker/Timer";
+// import { Timer } from "../../Components/timeTracker/Timer";
 // import React from "react";
 // import SideBar from "../../components/Sidebar/SideBar";
 // import { Timer } from "../../components/timeTracker/Timer";
-import React, { useState } from "react";
+import { useState } from "react";
 import plusBlue from "../../assets/ui-icons/plus-blue-req.svg";
 import list from "../../assets/ui-icons/list-blue.svg";
 import timerClock from "../../assets/ui-icons/clock-blue.svg";
@@ -25,7 +25,7 @@ import {
 import { BsTag } from "react-icons/bs";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { EmptyBox } from "../../components/timetracker/EmptyBox";
+import EmptyBox from "../../Components/timeTracker/EmptyBox";
 // import TrackerShower from "../../components/timetracker/TrackerShower";
 
 export const TimeTracker = () => {
@@ -51,7 +51,7 @@ export const TimeTracker = () => {
     <>
       <div>
         {/* <SideBar /> */}
-        <Timer />
+        {/* <Timer /> */}
       </div>
       <Box>
         <form onSubmit={handleSubmit} style={{ padding: "20px" }}>

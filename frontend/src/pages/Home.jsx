@@ -1,5 +1,4 @@
 import {
-  AspectRatio,
   Box,
   Button,
   ButtonGroup,
@@ -12,13 +11,11 @@ import {
   ListIcon,
   ListItem,
   SimpleGrid,
-  Switch,
   Text,
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
 import ReactPlayer from "react-player";
-import { useState } from "react";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { BiTargetLock } from "react-icons/bi";
@@ -26,7 +23,7 @@ import { AiOutlineDollarCircle } from "react-icons/ai";
 import { RiTeamLine } from "react-icons/ri";
 import { BsClockHistory } from "react-icons/bs";
 import { GiCheckMark } from "react-icons/gi";
-import Testimonials from "../components/Testimonials";
+import Testimonials from "../Components/Testimonials";
 
 export const ClockyCards = ({ icon, heading, text }) => {
   return (
@@ -57,40 +54,39 @@ export const ClockyCards = ({ icon, heading, text }) => {
 };
 
 const Home = () => {
-  const [isLight, setIsLight] = useState(true);
-  const clockyCardsData = [
-    {
-      icon: BiTargetLock,
-      heading: "Boost productivity",
-      text: "Track time you spend on activities, see where your time goes, and improve your time management skills.",
-      id: 1,
-    },
-    {
-      icon: AiOutlineDollarCircle,
-      heading: "Bill clients",
-      text: "Track billable time and expenses, show clients how much you've worked, see how much you've earned, and create invoices.",
-      id: 2,
-    },
+  const whyClockify = [
     {
       icon: RiTeamLine,
       heading: "Manage team",
       text: "Track attendance for payroll and accounting, see who works on what, and manage workload among teams.",
-      id: 3,
+      id: 1,
     },
     {
       icon: BsClockHistory,
       heading: "Business intelligence",
       text: "Track time and analyze your company's efficiency across projects, clients, departments, and employees.",
+      id: 2,
+    },
+    {
+      icon: AiOutlineDollarCircle,
+      heading: "Bill clients",
+      text: "Track billable time and expenses, show clients how much you've worked, see how much you've earned, and create invoices.",
+      id: 3,
+    },
+    {
+      icon: BiTargetLock,
+      heading: "Boost productivity",
+      text: "Track time you spend on activities, see where your time goes, and improve your time management skills.",
       id: 4,
     },
   ];
 
-  const TestimonialsR1 = [
+  const reviewR1 = [
     {
-      title: "Trackers don't get much better than this",
+      title: "It has greatly improved our business",
       feedback:
-        "I track my time for all the tasks I perform; work-related and other.",
-      client: "— Ivan Arsenov, Recruitment Manager",
+        "Before Clockify we had no idea of how long we were spending on each event.",
+      client: "— Hilary Raeside, Executive Assistant",
       id: 1,
     },
     {
@@ -101,9 +97,10 @@ const Home = () => {
       id: 2,
     },
     {
-      title: "Great experience",
-      feedback: "It has really helped me become more organized.",
-      client: "— Lauren Leonard, Illustrator",
+      title: "Trackers don't get much better than this",
+      feedback:
+        "I track my time for all the tasks I perform; work-related and other.",
+      client: "— Ivan Arsenov, Recruitment Manager",
       id: 3,
     },
     {
@@ -114,10 +111,9 @@ const Home = () => {
       id: 4,
     },
     {
-      title: "It has greatly improved our business",
-      feedback:
-        "Before Clockify we had no idea of how long we were spending on each event.",
-      client: "— Hilary Raeside, Executive Assistant",
+      title: "Great experience",
+      feedback: "It has really helped me become more organized.",
+      client: "— Lauren Leonard, Illustrator",
       id: 5,
     },
     {
@@ -142,7 +138,7 @@ const Home = () => {
       id: 8,
     },
   ];
-  const TestimonialsR2 = [
+  const reviewR2 = [
     {
       title: "Fantastic from start to finish",
       feedback: "I absolutely love how this software has so many features",
@@ -198,25 +194,25 @@ const Home = () => {
       id: 8,
     },
   ];
-  const TestimonialsR3 = [
+  const reviewR3 = [
+    {
+      title: "Works great for startups",
+      feedback:
+        "We grew from a couple people to almost 80 and it worked perfectly the whole time!",
+      client: "— Zachary Gaskill, Sales Manager",
+      id: 1,
+    },
     {
       title: "Must-use productivity software",
       feedback: "Time-tracking is smoother, productivity is easier.",
       client: "— Ellen Mubwanda, Copywriter",
-      id: 1,
+      id: 2,
     },
     {
       title: "May be the best time tracker there is!",
       feedback:
         "Clockify has been an essential tool for our team to track time on a daily basis.",
       client: "— Camille Ang, Entrepreneur",
-      id: 2,
-    },
-    {
-      title: "Works great for startups",
-      feedback:
-        "We grew from a couple people to almost 80 and it worked perfectly the whole time!",
-      client: "— Zachary Gaskill, Sales Manager",
       id: 3,
     },
     {
@@ -257,7 +253,6 @@ const Home = () => {
   ];
   return (
     <div>
-      <Navbar />
       <Box w={["", "80%"]} m="auto">
         <Text fontSize={["2xl", "4xl"]} textAlign="center" fontWeight={400}>
           The most popular free{" "}
@@ -670,7 +665,7 @@ const Home = () => {
         gap="10"
         mt={20}
       >
-        {clockyCardsData.map((ele) => {
+        {whyClockify.map((ele) => {
           return (
             <ClockyCards
               id={ele.id}
@@ -861,9 +856,9 @@ const Home = () => {
           ></Image>
         </Box>
       </Flex>
-      <Testimonials data={TestimonialsR1} direction={"right"} />
-      <Testimonials data={TestimonialsR2} direction={"left"} />
-      <Testimonials data={TestimonialsR3} direction={"right"} />
+      <Testimonials data={reviewR1} direction={"right"} />
+      <Testimonials data={reviewR2} direction={"left"} />
+      <Testimonials data={reviewR3} direction={"right"} />
       <Heading
         mt={20}
         mb={2}
