@@ -2,7 +2,7 @@ import React from "react";
 
 import { Notification } from "./notifications/Notification";
 
-import { Button, Flex, Image } from "@chakra-ui/react";
+import { Button, Flex } from "@chakra-ui/react";
 import { UserDetails } from "./userDetails/UserDetails";
 
 export const Navbar = () => {
