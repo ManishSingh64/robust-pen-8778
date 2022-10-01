@@ -152,9 +152,7 @@ const SideBar = ({ children }) => {
           <img src={clockify_logo} alt="clockify_logo" />
         </div>
 
-        <div>
-          {/* <Navbar /> */}
-        </div>
+        <div>{/* <Navbar /> */}</div>
       </div>
 
       <div className="main-container">
