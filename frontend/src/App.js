@@ -8,6 +8,7 @@ import { Routes, Route } from "react-router-dom";
 import { TimeTracker } from "./pages/TimeTracker/TimeTracker";
 import Home from "./pages/Home";
 import { Navbar } from "./Components/navbar/Navbar";
+import ReactPlayer from "react-player";
 
 function App() {
   return (

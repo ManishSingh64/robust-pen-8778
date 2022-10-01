@@ -10,9 +10,11 @@ import {
   Stack,
   Image,
   Text,
+  useColorMode,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { Link as RouterLink } from "react-router-dom";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 const Links = ["features", "download"];
 
@@ -33,6 +35,7 @@ const NavLink = ({ children }) => (
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
       <Box py={[1, 3]} px={[null, 20]} mb={10}>
@@ -51,7 +54,10 @@ export default function Navbar() {
           <HStack spacing={8} alignItems={"center"}>
             <Box>
               <RouterLink to={"/"}>
-                <Image src="https://clockify.me/assets/images/clockify-logo.svg"></Image>{" "}
+                <Image
+                  w="130px"
+                  src="https://clockify.me/assets/images/clockify-logo.svg"
+                ></Image>{" "}
               </RouterLink>
             </Box>
             <HStack
@@ -65,13 +71,19 @@ export default function Navbar() {
             </HStack>
           </HStack>
           <Flex alignItems={"center"}>
+            <IconButton
+              w="20px"
+              h="20px"
+              icon={colorMode === "light" ? <FaSun /> : <FaMoon />}
+              onClick={toggleColorMode}
+            ></IconButton>
             <Button
-              variant={"ghosted"}
-              colorScheme={"blue"}
+              variant="ghosted"
+              colorScheme="blue"
               size={["xs", "sm"]}
               mr={4}
             >
-              <RouterLink to={"/login"}>LOG IN</RouterLink>
+              <RouterLink to="/login">LOG IN</RouterLink>
             </Button>
             <Button
               variant={"outline"}
