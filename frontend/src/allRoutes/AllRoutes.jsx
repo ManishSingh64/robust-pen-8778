@@ -6,28 +6,21 @@ import { Simple } from "./Simple";
 import Home from "../pages/Home";
 import { TimeTracker } from "../pages/TimeTracker/TimeTracker";
 import { Calender } from "../pages/Calender/Calender";
-import Checkout from "../components/Premium/Checkout";
-import Pricing from "../components/Premium/Pricing";
-import SuccessMsg from "../components/Premium/Success";
+import Pricing from "../Components/Premium/Pricing";
 
 export const AllRoutes = () => {
   return (
     <div className="App">
-       <Routes>
-         <Route element={<Simple/>}>
-            <Route path="/" element={<Home/>} />
-         </Route>         
-         <Route element={<Protected/>}>
-            <Route path="/tracker" element={<TimeTracker />} />
-            <Route path="/calendar" element={<Calender />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/checkout/:id" element={<Checkout />} />
+      <Routes>
+        <Route element={<Simple />}>
+          <Route path="/" element={<Home />} />
+        </Route>
+        <Route element={<Protected />}>
+          <Route path="/tracker" element={<TimeTracker />} />
+          <Route path="/calendar" element={<Calender />} />
+          <Route path="/pricing" element={<Pricing />} />
 
-            <Route path="/price" element={<Pricing />} />
-            <Route path="/success" element={<SuccessMsg />} />
-
-
-            {/* <Route path="/dashboard" element={<Dashboard />} />
+          {/* <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/reports" element={<Reports />} />
             <Route path="/team" element={<Team />} />          
             <Route path="/clients" element={<Clients />} />          
@@ -36,8 +29,7 @@ export const AllRoutes = () => {
             <Route path="/timesheet" element={<TimeSheet />} />          
             <Route path="/settings" element={<Settings />} /> */}
         </Route>
-       </Routes>
+      </Routes>
     </div>
   );
-}
-
+};
