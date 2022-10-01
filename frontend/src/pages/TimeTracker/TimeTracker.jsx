@@ -25,7 +25,7 @@ import {
 import { BsTag } from "react-icons/bs";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import EmptyBox from "../../Components/timeTracker/EmptyBox";
+import EmptyBox from "../../Components/timetracker/EmptyBox";
 // import TrackerShower from "../../components/timetracker/TrackerShower";
 
 export const TimeTracker = () => {

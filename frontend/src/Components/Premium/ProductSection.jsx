@@ -29,6 +29,7 @@ const ProductSection = () => {
       if (Number(id) === el.id) {
         setgData(el);
         setLoading(false)
+        
       }
     });
   };
@@ -54,7 +55,7 @@ const ProductSection = () => {
           </Tab>
         </TabList>
         <Text m={[1, 0, 0, 3]}>
-          {planeName} for Karan Joshi's workspace workspace
+          {planeName}    workspace
         </Text>
         <Box p="1rem" border={"1px solid grey"}>
           <FormControl>

@@ -7,6 +7,8 @@ import Home from "../pages/Home";
 import { TimeTracker } from "../pages/TimeTracker/TimeTracker";
 import { Calender } from "../pages/Calender/Calender";
 import Pricing from "../Components/Premium/Pricing";
+import Checkout from "../Components/Premium/Checkout";
+import SuccessMsg from "../Components/Premium/Success";
 
 export const AllRoutes = () => {
   return (
@@ -19,6 +21,12 @@ export const AllRoutes = () => {
           <Route path="/tracker" element={<TimeTracker />} />
           <Route path="/calendar" element={<Calender />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/checkout/:id" element={<Checkout />} />
+
+          <Route path="/success" element={<SuccessMsg />} />
+
+
 
           {/* <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/reports" element={<Reports />} />

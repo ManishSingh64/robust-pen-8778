@@ -59,7 +59,7 @@ const Pricing = () => {
                 return (
                   <PriceCard
                     key={i}
-                    
+                    id={el.id}  
                     planeName={el.planeName}
                     role={el.role}
                     price={el.price}

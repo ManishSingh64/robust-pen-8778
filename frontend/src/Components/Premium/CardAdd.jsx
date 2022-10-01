@@ -23,7 +23,7 @@ import { useNavigate } from "react-router-dom";
 const CardAdd = () => {
     let navigate = useNavigate();
     const handleSubmit = ()=>{
-        return navigate('/success') ,{repalce:true};
+        return navigate('/success') ;
     }
   return (
     <Box border={"1px solid grey"} w={["100%", "100%", "50%", "70%"]} p="5">
