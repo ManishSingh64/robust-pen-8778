@@ -1,3 +1,8 @@
+// <<<<<<< HEAD
+// import React from "react";
+// import SideBar from "../../components/Sidebar/SideBar";
+// import { Timer } from "../../components/timeTracker/Timer";
+// =======
 import React, { useState } from "react";
 import plusBlue from '../../assets/ui-icons/plus-blue-req.svg'
 import list from '../../assets/ui-icons/list-blue.svg';
@@ -13,15 +18,16 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
-  Text,
+  // Text,
 } from "@chakra-ui/react";
-import { IoIosAddCircleOutline } from "react-icons/io";
+// import { IoIosAddCircleOutline } from "react-icons/io";
 import { BsTag } from "react-icons/bs";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { EmptyBox } from "../../components/timetracker/EmptyBox";
-import TrackerShower from "../../components/timetracker/TrackerShower";
-
+// import TrackerShower from "../../components/timetracker/TrackerShower";
+                                                                                       
+// >>>>>>> master
 
 export const TimeTracker = () => {
   const [toggleTimer, setToggleTimer] = useState(false);

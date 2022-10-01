@@ -26,7 +26,6 @@ import { BsClockHistory } from "react-icons/bs";
 import { GiCheckMark } from "react-icons/gi";
 import Testimonials from "../components/Testimonials";
 
-
 export const ClockyCards = ({ icon, heading, text }) => {
   return (
     <Box
