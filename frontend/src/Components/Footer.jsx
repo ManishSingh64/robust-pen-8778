@@ -30,10 +30,13 @@ export default function Footer() {
           templateColumns={{ sm: "1fr 1fr", md: "2fr 1fr 1fr 1fr 1fr" }}
           spacing={8}
         >
-          <Stack spacing={3}>
+          <Stack textAlign="left" spacing={3}>
             <Box>
-              <Link to={"/"}>
-                <Image src="https://clockify.me/assets/images/clockify-logo.svg"></Image>
+              <Link>
+                <Image
+                  pb={2}
+                  src="https://clockify.me/assets/images/clockify-logo.svg"
+                ></Image>
               </Link>
               <Text fontSize={"xs"} w={"15rem"}>
                 The world's leading time tracker and timesheet software for
@@ -49,43 +52,43 @@ export default function Footer() {
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>PRODUCT</ListHeader>
-            <Link to="/">Features</Link>
-            <Link to="/">Download</Link>
-            <Link to="/">Integrations</Link>
-            <Link to="/">Upgrade</Link>
-            <Link to="/">API</Link>
+            <Link>Features</Link>
+            <Link>Download</Link>
+            <Link>Integrations</Link>
+            <Link>Upgrade</Link>
+            <Link>API</Link>
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>SOLUTION</ListHeader>
-            <Link to="/">Time clock</Link>
-            <Link to="/">Timecard calculator</Link>
-            <Link to="/">Timesheet</Link>
-            <Link to="/">Reporting</Link>
-            <Link to="/">Scheduling</Link>
+            <Link>Time clock</Link>
+            <Link>Timecard calculator</Link>
+            <Link>Timesheet</Link>
+            <Link>Reporting</Link>
+            <Link>Scheduling</Link>
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>COMPANY</ListHeader>
-            <Link to="/">About us</Link>
-            <Link to="/">Customers</Link>
-            <Link to="/">
+            <Link>About us</Link>
+            <Link>Customers</Link>
+            <Link>
               <Text fontSize={"xs"}>WE ALSO MAKE</Text>
             </Link>
             <HStack>
               <Image src="https://clockify.me/assets/images/pumble-icon-color.svg"></Image>
-              <Link to="/">Pumble</Link>
+              <Link>Pumble</Link>
             </HStack>
             <HStack>
               <Image src="https://clockify.me/assets/images/plaky-icon-color.svg"></Image>
-              <Link to="/">Plaky</Link>
+              <Link>Plaky</Link>
             </HStack>
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>SUPPORT</ListHeader>
-            <Link to="/">Help</Link>
-            <Link to="/">Tutorials</Link>
-            <Link to="/">Resources</Link>
-            <Link to="/">Blog</Link>
-            <Link to="/">Contact</Link>
+            <Link>Help</Link>
+            <Link>Tutorials</Link>
+            <Link>Resources</Link>
+            <Link>Blog</Link>
+            <Link>Contact</Link>
           </Stack>
         </SimpleGrid>
       </Container>
