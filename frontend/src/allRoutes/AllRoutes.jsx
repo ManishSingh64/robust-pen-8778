@@ -9,6 +9,9 @@ import { Calender } from "../pages/Calender/Calender";
 
 import Pricing from "../components/Premium/Pricing";
 import { Project } from "../pages/projects/Project";
+import Checkout from "../components/Premium/Checkout";
+import SuccessMsg from "../components/Premium/Success";
+import { Teams } from "../pages/Teams/Teams";
 
 
 export const AllRoutes = () => {
@@ -27,6 +30,7 @@ export const AllRoutes = () => {
           <Route path="/checkout/:id" element={<Checkout />} />
 
           <Route path="/success" element={<SuccessMsg />} />
+          <Route path="/team" element={<Teams />} />
 
 
 
