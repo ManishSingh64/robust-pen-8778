@@ -6,10 +6,10 @@ import { Simple } from "./Simple";
 import Home from "../pages/Home";
 import { TimeTracker } from "../pages/TimeTracker/TimeTracker";
 import { Calender } from "../pages/Calender/Calender";
-import Pricing from "../Components/Premium/Pricing";
-import Login from "../Components/Login/Login";
-import CheckAuth from "../Components/Login/CheckAuth";
-import Signup from "../Components/Signup/Signup";
+import Pricing from "../components/Premium/Pricing";
+import Login from "../components/Login/Login";
+import CheckAuth from "../components/Login/CheckAuth";
+import Signup from "../components/Signup/Signup";
 
 export const AllRoutes = () => {
   return (
