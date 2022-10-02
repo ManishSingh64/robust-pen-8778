@@ -8,7 +8,7 @@ import {
   AiFillWindows,
 } from "react-icons/ai";
 
-const EmptyBox = () => {
+export const EmptyBox = () => {
   return (
     <Flex
       flexDir="column"
@@ -43,4 +43,4 @@ const EmptyBox = () => {
   );
 };
 
-export default EmptyBox;
+
