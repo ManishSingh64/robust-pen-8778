@@ -1,0 +1,18 @@
+
+/* display={true ? "none" : "grid"} */
+
+.emptyBox{
+    width: 97%;
+    min-height: 80vh;
+    margin: auto;
+    display: grid;
+    position: center;
+}
+
+.dataShowerContainer{
+    max-height: 80vh;
+    overflow: scroll;    
+}
+.dataShowerContainer::-webkit-scrollbar {
+    display: none;
+}

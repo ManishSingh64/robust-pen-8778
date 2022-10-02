@@ -1,0 +1,62 @@
+.trackerContainer {
+  width: 97%;
+  margin: auto;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+}
+.trackerSplitTime {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.trackerSplitTime input {
+  border: 1px solid;
+  width: 70%;
+}
+
+.firstContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+.secondContainer {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blueDoller{
+    color: blue;
+    font-weight: bold;
+}
+
+/* fullTimeContainer */
+.fullTimeContainer{  
+  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .trackerContainer {
+    flex-direction: column;
+    padding: 0;
+  }
+  .firstContainer{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 10px;
+  }
+  .secondContainer{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 10px;
+  }
+}
