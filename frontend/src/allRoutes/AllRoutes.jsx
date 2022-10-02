@@ -10,6 +10,7 @@ import Pricing from "../components/Premium/Pricing";
 import Login from "../components/Login/Login";
 import CheckAuth from "../components/Login/CheckAuth";
 import Signup from "../components/Signup/Signup";
+import { Project } from "../pages/projects/Project";
 
 export const AllRoutes = () => {
   return (
@@ -32,6 +33,13 @@ export const AllRoutes = () => {
           <Route path="/calendar" element={<Calender />} />
           <Route path="/pricing" element={<Pricing />} />
 
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/checkout/:id" element={<Checkout />} />
+
+          <Route path="/success" element={<SuccessMsg />} />
+
+
+
           {/* <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/reports" element={<Reports />} />
             <Route path="/team" element={<Team />} />          
@@ -40,6 +48,9 @@ export const AllRoutes = () => {
             <Route path="/tags" element={<Tags />} />          
             <Route path="/timesheet" element={<TimeSheet />} />          
             <Route path="/settings" element={<Settings />} /> */}
+
+          <Route path="/projects" element={<Project />} />
+
         </Route>
       </Routes>
     </div>
