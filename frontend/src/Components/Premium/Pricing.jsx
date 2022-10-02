@@ -37,12 +37,17 @@ const Pricing = () => {
         </Flex>
         <TabPanels>
           <TabPanel>
-            <Box display={"flex"} flexDir={['column','column','row','row']} gap={['20px','20px',0,0]} boxSizing="border-box">
+            <Box
+              display={"flex"}
+              flexDir={["column", "column", "row", "row"]}
+              gap={["20px", "20px", 0, 0]}
+              boxSizing="border-box"
+            >
               {monthly.map((el, i) => {
                 return (
                   <PriceCard
                     key={i}
-                    id= {el.id}
+                    id={el.id}
                     planeName={el.planeName}
                     role={el.role}
                     price={el.price}
@@ -54,12 +59,16 @@ const Pricing = () => {
             </Box>
           </TabPanel>
           <TabPanel>
-            <Box display={"flex"} flexDir={['column','column','row','row']} boxSizing="border-box">
+            <Box
+              display={"flex"}
+              flexDir={["column", "column", "row", "row"]}
+              boxSizing="border-box"
+            >
               {annual.map((el, i) => {
                 return (
                   <PriceCard
                     key={i}
-                    id={el.id}  
+                    id={el.id}
                     planeName={el.planeName}
                     role={el.role}
                     price={el.price}

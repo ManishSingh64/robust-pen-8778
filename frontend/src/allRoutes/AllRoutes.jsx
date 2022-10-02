@@ -21,14 +21,7 @@ export const AllRoutes = () => {
         <Route element={<Simple />}>
           <Route path="/" element={<Home />} />
         </Route>
-        <Route
-          path="/login"
-          element={
-            <CheckAuth>
-              <Login />
-            </CheckAuth>
-          }
-        />
+        <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route element={<Protected />}>
           <Route path="/tracker" element={<TimeTracker />} />
