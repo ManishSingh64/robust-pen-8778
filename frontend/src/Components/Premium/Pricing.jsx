@@ -37,7 +37,7 @@ const Pricing = () => {
         </Flex>
         <TabPanels>
           <TabPanel>
-            <Box display={"flex"} boxSizing="border-box">
+            <Box display={"flex"} flexDir={['column','column','row','row']} gap={['20px','20px',0,0]} boxSizing="border-box">
               {monthly.map((el, i) => {
                 return (
                   <PriceCard
@@ -54,7 +54,7 @@ const Pricing = () => {
             </Box>
           </TabPanel>
           <TabPanel>
-            <Box display={"flex"} boxSizing="border-box">
+            <Box display={"flex"} flexDir={['column','column','row','row']} boxSizing="border-box">
               {annual.map((el, i) => {
                 return (
                   <PriceCard

@@ -78,7 +78,7 @@ const CardAdd = () => {
                 Payment information
               </Text>
             </Box>
-            <Box w="60%">
+            <Box w={['100%',"60%"]}>
               <FormControl isRequired>
                 <FormLabel>Card Number</FormLabel>
                 <InputGroup>

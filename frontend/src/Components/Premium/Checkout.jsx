@@ -13,7 +13,7 @@ const Checkout = () => {
   //   return <h1>Loading</h1>
   // }
   return (
-    <Flex justifyContent={'space-around'} gap='10' mx='10' my='5'>
+    <Flex justifyContent={'space-around'} flexDir={['column','column','row']} gap='10' mx='10' my='5'>
       <ProductSection />
       <CardAdd/>
     </Flex>

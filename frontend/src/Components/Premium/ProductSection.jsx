@@ -54,7 +54,7 @@ const ProductSection = () => {
             </Badge>
           </Tab>
         </TabList>
-        <Text m={[1, 0, 0, 3]}>
+        <Text m={[5, 0, 0, 3]}>
           {planeName}    workspace
         </Text>
         <Box p="1rem" border={"1px solid grey"}>
