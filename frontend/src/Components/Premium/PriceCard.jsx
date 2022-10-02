@@ -1,18 +1,23 @@
 import { Box, Button, Text } from "@chakra-ui/react";
 import React from "react";
+import {  useNavigate } from "react-router-dom";
 
-const PriceCard = ({ planeName, role, price, buttonColor, data }) => {
-  
+const PriceCard = ({id, planeName, role, price, buttonColor, data }) => {
+  console.log(id);
+  const navigate = useNavigate();
+
   return (
     <Box w="100%">
-      <Box  
+      <Box
         borderTop={`3px solid ${buttonColor}`}
         borderBottom={"1px solid grey"}
         borderRight={"1px solid grey"}
         borderLeft={"1px solid grey"}
-        w='250px'
+        w="250px"
       >
-        <Text fontSize={"3xl"}>{planeName}</Text>
+        <Text fontSize={"3xl"} my="6">
+          {planeName}
+        </Text>
         <Text fontSize={"4xs"}>{role}</Text>
         <Text display={"flex"} justifyContent="center" my="2">
           ${" "}
@@ -30,12 +35,15 @@ const PriceCard = ({ planeName, role, price, buttonColor, data }) => {
           bgColor={buttonColor}
           _hover={{ color: "white", bgColor: buttonColor }}
           borderRadius="none"
-          width={'90%'}
+          width={"90%"}
+          onClick={() => {
+            navigate(`/checkout/${id}`);
+          }}
         >
           UPGRADE
         </Button>
-        <Box p={'6'}>
-          {data.map((el,i) => {
+        <Box p={"6"}>
+          {data.map((el, i) => {
             return (
               <Text key={i} fontSize={"14px"} lineHeight="28px" align={"left"}>
                 {el.title}

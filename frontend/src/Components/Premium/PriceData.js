@@ -1,5 +1,6 @@
 const monthly = [
   {
+    id:1,
     planeName: "BASIC",
     role: "Administration",
     price: 4,
@@ -19,6 +20,7 @@ const monthly = [
     ],
   },
   {
+    id:2,
     planeName: "STANDARD",
     role: "Timesheeting & Billing",
     price: 6,
@@ -38,6 +40,7 @@ const monthly = [
     ],
   },
   {
+    id:3,
     planeName: "PRO",
     role: "Profit & Productivity",
     price: 9,
@@ -58,6 +61,7 @@ const monthly = [
     ],
   },
   {
+    id:4,
     planeName: "ENTERPRISE",
     role: "Control & Security",
     price: 14,
@@ -75,6 +79,7 @@ const monthly = [
 
 const annual = [
     {
+      id:1,
       planeName: "BASIC",
       role: "Administration",
       price: 3,
@@ -94,6 +99,7 @@ const annual = [
       ],
     },
     {
+      id:2,
       planeName: "STANDARD",
       role: "Timesheeting & Billing",
       price: 5,
@@ -113,6 +119,7 @@ const annual = [
       ],
     },
     {
+      id:3,
       planeName: "PRO",
       role: "Profit & Productivity",
       price: 7,
@@ -133,6 +140,7 @@ const annual = [
       ],
     },
     {
+      id:4,
       planeName: "ENTERPRISE",
       role: "Control & Security",
       price: 11,

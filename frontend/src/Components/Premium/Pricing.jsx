@@ -17,8 +17,10 @@ import { monthly, annual } from "./PriceData";
 const Pricing = () => {
   return (
     <VStack>
-      <Text fontSize={"3xl"}>Get more features</Text>
-      <Text>Upgrade your workspace to use advanced features.</Text>
+      <Box m={[0, 0, 0, 8]}>
+        <Text fontSize={"3xl"}>Get more features</Text>
+        <Text>Upgrade your workspace to use advanced features.</Text>
+      </Box>
       <Tabs variant={"enclosed"}>
         <Flex justifyContent={"center"} direction="row">
           <TabList>
@@ -35,11 +37,12 @@ const Pricing = () => {
         </Flex>
         <TabPanels>
           <TabPanel>
-            <Box display={"flex"} boxSizing="border-box">
+            <Box display={"flex"} flexDir={['column','column','row','row']} gap={['20px','20px',0,0]} boxSizing="border-box">
               {monthly.map((el, i) => {
                 return (
                   <PriceCard
                     key={i}
+                    id= {el.id}
                     planeName={el.planeName}
                     role={el.role}
                     price={el.price}
@@ -51,11 +54,12 @@ const Pricing = () => {
             </Box>
           </TabPanel>
           <TabPanel>
-            <Box display={"flex"} boxSizing="border-box">
+            <Box display={"flex"} flexDir={['column','column','row','row']} boxSizing="border-box">
               {annual.map((el, i) => {
                 return (
                   <PriceCard
                     key={i}
+                    id={el.id}  
                     planeName={el.planeName}
                     role={el.role}
                     price={el.price}
