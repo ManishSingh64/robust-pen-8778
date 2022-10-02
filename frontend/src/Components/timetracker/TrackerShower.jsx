@@ -45,23 +45,23 @@ export const TrackerShower = ({ data }) => {
       <div className={styles.firstContainer}>
         <div>
           <input
-            name="trackerName"
+            name="name"
             onChange={handleChange}
-            value={userData.trackerName}
+            value={userData.name}
             type="text"
           />
         </div>
 
-        <div>{data.trackerProject}</div>
+        <div>{data.projectName}</div>
 
-        <div>{data.trackerTag}</div>
+        <div>{data.tag}</div>
       </div>
 
       <div className={styles.secondContainer}>
         <div>
           <button>
             <TbCurrencyDollar
-              className={data.trackerBillable ? styles.blueDoller : ""}
+              className={data.billable ? styles.blueDoller : ""}
             />
           </button>
         </div>
@@ -69,8 +69,8 @@ export const TrackerShower = ({ data }) => {
         <div className={styles.trackerSplitTime}>
           <div>
             <input
-              value={userData.trackertime1}
-              name="trackertime1"
+              value={userData.startAt}
+              name="startAt"
               onChange={handleChange}
               type="number"
               placeholder="00:00"
@@ -79,8 +79,8 @@ export const TrackerShower = ({ data }) => {
           <div>-</div>
           <div>
             <input
-              value={userData.trackertime2}
-              name="trackertime2"
+              value={userData.endAt}
+              name="endAt"
               onChange={handleChange}
               type="number"
               placeholder="00:00"
@@ -90,8 +90,8 @@ export const TrackerShower = ({ data }) => {
 
         <div>
           <input
-            value={userData.trackerDate}
-            name="trackerDate"
+            value={userData.date}
+            name="date"
             onChange={handleChange}
             type="date"
           />
@@ -120,14 +120,14 @@ export const TrackerShower = ({ data }) => {
 /*
 
 const taskSchema = mongoose.Schema({
-  trackerBillable: Boolean,
-  trackerDate: String,
-  trackerName: String,
-  trackerProject: String,
-  trackerTag: String,
-  trackertime1: String,
-  trackertime2: String,
-  trackertime3: String,  
+  billable: Boolean,
+  date: String,
+  name: String,
+  projectName: String,
+  tag: String,
+  startAt: String,
+  endAt: String,
+  stopAt: String,  
 });
 
   name: { type: String, required: true },

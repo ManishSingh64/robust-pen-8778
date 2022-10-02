@@ -24,7 +24,7 @@ import { AiOutlineDollarCircle } from "react-icons/ai";
 import { RiTeamLine } from "react-icons/ri";
 import { BsClockHistory } from "react-icons/bs";
 import { GiCheckMark } from "react-icons/gi";
-import Testimonials from "../Components/Testimonials";
+import Testimonials from "../components/Testimonials";
 
 
 export const ClockyCards = ({ icon, heading, text }) => {

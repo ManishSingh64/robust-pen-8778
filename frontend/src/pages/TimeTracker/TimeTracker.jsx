@@ -20,7 +20,7 @@ import {
   getTrackerAPI,
   postTrackerAPI,
 } from "../../store/TimeTracker/timeTracker.action";
-import { Tester } from "../../components/timeTracker/Tester";
+
 
 export const TimeTracker = () => {
   const [isLargerThan1000] = useMediaQuery("(min-width: 1000px)");
@@ -144,7 +144,7 @@ export const TimeTracker = () => {
 
               <Input
                 w="20%"
-                name="trackertime3"
+                name="stopAt"
                 onChange={handleChange}
                 type="text"
                 placeholder="0:00:00"
@@ -183,8 +183,7 @@ export const TimeTracker = () => {
 
         <div className={styles.dataShowerContainer}>
           {timeTrackerData.length > 0 ? (
-            <div>
-              <Tester/>             
+            <div>                       
                 {timeTrackerData.map((el) => (
                   <Box key={el.id}>                  
                     <TrackerShower data={el} />
