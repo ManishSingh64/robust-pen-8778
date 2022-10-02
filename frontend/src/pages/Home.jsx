@@ -858,7 +858,7 @@ const Home = () => {
         </Box>
       </Flex>
       <Testimonials data={reviewR1} direction={"right"} />
-      <Testimonials data={reviewR2} direction={"left"} />
+      <Testimonials data={reviewR2} direction={"right"} />
       <Testimonials data={reviewR3} direction={"right"} />
       <Heading
         mt={20}
