@@ -13,14 +13,14 @@ import {
 } from "@chakra-ui/react";
 
 import { TbCurrencyDollar } from "react-icons/tb";
-import { EmptyBox } from "../../Components/timetracker/EmptyBox";
-import { TrackerShower } from "../../Components/timetracker/TrackerShower";
+import { EmptyBox } from "../../components/timeTracker/EmptyBox";
+import { TrackerShower } from "../../components/timeTracker/TrackerShower";
 import { useDispatch, useSelector } from "react-redux";
 import {
   getTrackerAPI,
   postTrackerAPI,
 } from "../../store/TimeTracker/timeTracker.action";
-import { Tester } from "../../Components/timetracker/Tester";
+import { Tester } from "../../components/timeTracker/Tester";
 
 export const TimeTracker = () => {
   const [isLargerThan1000] = useMediaQuery("(min-width: 1000px)");
