@@ -1,3 +1,6 @@
+.redBorder {
+  border: 1px solid red;
+}
 .container {
   width: 100%;
   display: flex;
@@ -7,6 +10,7 @@
   width: 60%;
   /* border: 1px solid black; */
 }
+
 .imag {
   width: 40%;
   /* background-color: #673AB7; */

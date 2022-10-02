@@ -9,6 +9,7 @@ import { Calender } from "../pages/Calender/Calender";
 import Pricing from "../Components/Premium/Pricing";
 import Login from "../Components/Login/Login";
 import CheckAuth from "../Components/Login/CheckAuth";
+import Signup from "../Components/Signup/Signup";
 
 export const AllRoutes = () => {
   return (
@@ -25,6 +26,7 @@ export const AllRoutes = () => {
             </CheckAuth>
           }
         />
+        <Route path="/signup" element={<Signup />} />
         <Route element={<Protected />}>
           <Route path="/tracker" element={<TimeTracker />} />
           <Route path="/calendar" element={<Calender />} />

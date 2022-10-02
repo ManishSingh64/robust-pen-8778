@@ -1,11 +1,9 @@
 import { Box, Link, Button, Text, useToast } from "@chakra-ui/react";
-import React, { useState, useEffect, useRef } from "react";
-import styles from "./login.module.css";
-import { FcGoogle } from "react-icons/fc";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import { FcGoogle } from "react-icons/fc";
 
-const LoginForm = () => {
+const SignupForm = () => {
   const [form, setForm] = useState({});
   const ref = useRef();
   const passref = useRef();
@@ -17,45 +15,41 @@ const LoginForm = () => {
     });
   };
 
-  const navigate = useNavigate();
-
   const toast = useToast();
   function ToastExample() {
     return (
       <Button
-        w="240px"
+        w="280px"
         color={"white"}
         fontSize="14px"
         mt={4}
         backgroundColor={"#03A9F4"}
         type="submit"
-        onClick={handleLogin}
+        onClick={handleSignup}
       >
-        LOG IN
+        CREATE FREE ACCOUNT
       </Button>
     );
   }
 
-  const handleLogin = () => {
+  const handleSignup = () => {
     form.email &&
       axios
-        .post("https://clockify-api.herokuapp.com/login", form)
+        .post("https://clockify-api.herokuapp.com/signup", form)
         .then((res) => {
           toast({
-            title: "Login Successfull.",
-            description: "You have successfully logged in.",
+            title: "Account created.",
+            description: "We've created your account for you.",
             status: "success",
             duration: 9000,
             isClosable: true,
           });
-          localStorage.setItem("token", JSON.stringify(res.data.token));
-          navigate("/tracker");
           console.log(res.data);
         })
         .catch((err) => {
           toast({
-            title: "Please signup first",
-            description: "User not exist",
+            title: "Email id Already exist",
+            description: "Please Login",
             status: "warning",
             duration: 9000,
             isClosable: true,
@@ -63,6 +57,7 @@ const LoginForm = () => {
           console.log(err);
         });
   };
+
   const handleOnSubmit = (e) => {
     e.preventDefault();
     if (!form.email) {
@@ -74,7 +69,6 @@ const LoginForm = () => {
         isClosable: true,
       });
       ref.current.focus();
-      ref.current.className += styles.redBorder;
     } else if (!form.password) {
       toast({
         title: "please enter password",
@@ -92,11 +86,10 @@ const LoginForm = () => {
       <form
         onSubmit={handleOnSubmit}
         style={{
-          width: "300px",
+          width: "350px",
           padding: "15px",
           boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
           margin: "auto",
-          marginTop: "80px",
           backgroundColor: "white",
         }}
       >
@@ -109,11 +102,11 @@ const LoginForm = () => {
             textAlign={"left"}
             mt={5}
           >
-            Log In
+            Sign up
           </Text>
           <input
             style={{
-              width: "240px",
+              width: "280px",
               padding: "6px",
               marginBottom: "15px",
               borderRadius: "0px",
@@ -129,7 +122,7 @@ const LoginForm = () => {
         <div>
           <input
             style={{
-              width: "240px",
+              width: "280px",
               padding: "5px",
               borderRadius: "0px",
               border: "1px solid #c6d2d9",
@@ -142,29 +135,27 @@ const LoginForm = () => {
             onChange={onChange}
           />
         </div>
+
         <div
           style={{
             display: "flex",
-            justifyContent: "space-between",
-            width: "240px",
+            width: "280px",
             margin: "auto",
           }}
         >
-          <input type="checkbox" name="isIndian" onChange={onChange} />
-          <label
-            style={{ fontSize: "14px", color: "#333", marginLeft: "-15px" }}
-          >
-            Stay logged in{"   "}
+          <input type="checkbox" name="terms" onChange={onChange} />
+          <label style={{ fontSize: "14px", color: "#333", marginLeft: "8px" }}>
+            I agree to the {"  "}
           </label>
-          <Link fontSize={"14px"} color={"#03A9F4"}>
-            Forget password?
+          <Link fontSize={"14px"} ml={1} color={"#03A9F4"}>
+            Terms of use
           </Link>
         </div>
         <ToastExample />
         <Box fontSize={"14px"} m={3}>
           OR
         </Box>
-        <Button variant={"outline"} w={"240px"}>
+        <Button mb={5} variant={"outline"} w={"280px"}>
           <FcGoogle style={{ position: "relative", left: "-30px" }} />
           <Text fontSize={"14px"}> Continue with Google</Text>
         </Button>
@@ -173,4 +164,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default SignupForm;
