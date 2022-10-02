@@ -11,6 +11,8 @@ import Login from "../components/Login/Login";
 import CheckAuth from "../components/Login/CheckAuth";
 import Signup from "../components/Signup/Signup";
 import { Project } from "../pages/projects/Project";
+import Checkout from "../components/Premium/Checkout";
+import SuccessMsg from "../components/Premium/Success";
 
 export const AllRoutes = () => {
   return (
@@ -38,8 +40,6 @@ export const AllRoutes = () => {
 
           <Route path="/success" element={<SuccessMsg />} />
 
-
-
           {/* <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/reports" element={<Reports />} />
             <Route path="/team" element={<Team />} />          
@@ -50,7 +50,6 @@ export const AllRoutes = () => {
             <Route path="/settings" element={<Settings />} /> */}
 
           <Route path="/projects" element={<Project />} />
-
         </Route>
       </Routes>
     </div>
