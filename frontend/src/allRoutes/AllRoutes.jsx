@@ -6,9 +6,10 @@ import { Simple } from "./Simple";
 import Home from "../pages/Home";
 import { TimeTracker } from "../pages/TimeTracker/TimeTracker";
 import { Calender } from "../pages/Calender/Calender";
-import Pricing from "../Components/Premium/Pricing";
-import Checkout from "../Components/Premium/Checkout";
-import SuccessMsg from "../Components/Premium/Success";
+
+import Pricing from "../components/Premium/Pricing";
+import { Project } from "../pages/projects/Project";
+
 
 export const AllRoutes = () => {
   return (
@@ -21,6 +22,7 @@ export const AllRoutes = () => {
           <Route path="/tracker" element={<TimeTracker />} />
           <Route path="/calendar" element={<Calender />} />
           <Route path="/pricing" element={<Pricing />} />
+
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/checkout/:id" element={<Checkout />} />
 
@@ -36,6 +38,9 @@ export const AllRoutes = () => {
             <Route path="/tags" element={<Tags />} />          
             <Route path="/timesheet" element={<TimeSheet />} />          
             <Route path="/settings" element={<Settings />} /> */}
+
+          <Route path="/projects" element={<Project />} />
+
         </Route>
       </Routes>
     </div>
