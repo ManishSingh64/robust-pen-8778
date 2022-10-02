@@ -665,13 +665,13 @@ const Home = () => {
         gap="10"
         mt={20}
       >
-        {whyClockify.map((ele) => {
+        {whyClockify.map((item) => {
           return (
             <ClockyCards
-              key={ele.id}
-              icon={ele.icon}
-              heading={ele.heading}
-              text={ele.text}
+              key={item.id}
+              icon={item.icon}
+              heading={item.heading}
+              text={item.text}
             />
           );
         })}

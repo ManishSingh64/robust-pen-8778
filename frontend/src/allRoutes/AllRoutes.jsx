@@ -6,10 +6,11 @@ import { Simple } from "./Simple";
 import Home from "../pages/Home";
 import { TimeTracker } from "../pages/TimeTracker/TimeTracker";
 import { Calender } from "../pages/Calender/Calender";
-
 import Pricing from "../components/Premium/Pricing";
+import Login from "../components/Login/Login";
+import CheckAuth from "../components/Login/CheckAuth";
+import Signup from "../components/Signup/Signup";
 import { Project } from "../pages/projects/Project";
-
 
 export const AllRoutes = () => {
   return (
@@ -18,6 +19,15 @@ export const AllRoutes = () => {
         <Route element={<Simple />}>
           <Route path="/" element={<Home />} />
         </Route>
+        <Route
+          path="/login"
+          element={
+            <CheckAuth>
+              <Login />
+            </CheckAuth>
+          }
+        />
+        <Route path="/signup" element={<Signup />} />
         <Route element={<Protected />}>
           <Route path="/tracker" element={<TimeTracker />} />
           <Route path="/calendar" element={<Calender />} />

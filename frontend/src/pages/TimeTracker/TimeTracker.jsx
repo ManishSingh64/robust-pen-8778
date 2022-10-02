@@ -14,15 +14,16 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
-  // Text,
 } from "@chakra-ui/react";
-// import { IoIosAddCircleOutline } from "react-icons/io";
+import React from "react";
+import { useState } from "react";
+import plusBlue from "../../assets/ui-icons/plus-blue-req.svg";
+import list from "../../assets/ui-icons/list-blue.svg";
+import timerClock from "../../assets/ui-icons/clock-blue.svg";
 import { BsTag } from "react-icons/bs";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
 import EmptyBox from "../../components/timetracker/EmptyBox.jsx";
-
 
 export const TimeTracker = () => {
   const [toggleTimer, setToggleTimer] = useState(false);
@@ -43,7 +44,6 @@ export const TimeTracker = () => {
   };
 
   return (
-    // =======
     <>
       <div>
         {/* <SideBar /> */}
@@ -158,6 +158,5 @@ export const TimeTracker = () => {
         </Box>
       </Box>
     </>
-    // >>>>>>> master
   );
 };
