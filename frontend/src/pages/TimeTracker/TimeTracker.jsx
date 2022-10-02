@@ -9,6 +9,10 @@ import {
   Flex,
   Image,
   Input,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
   useMediaQuery,
 } from "@chakra-ui/react";
 
@@ -20,6 +24,15 @@ import {
   getTrackerAPI,
   postTrackerAPI,
 } from "../../store/TimeTracker/timeTracker.action";
+
+import { useState } from "react";
+import list from "../../assets/ui-icons/list-blue.svg";
+import timerClock from "../../assets/ui-icons/clock-blue.svg";
+// import plusBlue from "../../assets/ui-icons/plus-blue-req.svg";
+// import { BsTag } from "react-icons/bs";
+// import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import EmptyBox from "../../components/timeTracker/EmptyBox";
 
 
 export const TimeTracker = () => {
@@ -56,15 +69,23 @@ export const TimeTracker = () => {
 
   return (
     <>
+      <div>
+        {/* <SideBar /> */}
+        {/* <Timer /> */}
+      </div>
       <Box>
         <form onSubmit={handleSubmit} style={{ padding: "20px" }}>
           <Flex
+<<<<<<< HEAD
             maxW={"100vw"}
             flexDir={isLargerThan1000 ? "row" : "column"}
+=======
+>>>>>>> master
             border="1px solid #ccc"
             borderRadius="5"
             justify="space-between"
             align="center"
+<<<<<<< HEAD
             gap={isLargerThan1000 ? "8" : "0"}
             p={isLargerThan1000 ? "5px 5px" : "0"}
           >
@@ -80,10 +101,21 @@ export const TimeTracker = () => {
                 type="text"
                 border="none"
                 name="trackerName"
+=======
+            gap="8"
+            p="2px 5px"
+          >
+            <Flex w="60%" gap="5" justify="space-between" align="center">
+              <Input
+                type="text"
+                border="none"
+                name="trackername"
+>>>>>>> master
                 onChange={handleChange}
                 placeholder="What are you working on?"
               />
 
+<<<<<<< HEAD
               <Input
                 w="50%"
                 type="text"
@@ -196,6 +228,96 @@ export const TimeTracker = () => {
             </div>
           )}
         </div>
+=======
+              <Menu>
+                <MenuButton>
+                  <Flex color="blue">
+                    <Box>
+                      <Image w="35px" src={plusBlue} alt="plus" />
+                    </Box>
+                    <Box>Project</Box>
+                  </Flex>
+                </MenuButton>
+                <MenuList>
+                  <MenuItem>Notifications</MenuItem>
+                  <MenuItem>No new notifications</MenuItem>
+                </MenuList>
+              </Menu>
+            </Flex>
+
+            <Menu>
+              <MenuButton>
+                <BsTag size="30" />
+              </MenuButton>
+              <MenuList>
+                <MenuItem>Notifications</MenuItem>
+                <MenuItem>No new notifications</MenuItem>
+              </MenuList>
+            </Menu>
+
+            <Flex display={toggleTimer ? "flex" : "none"}>
+              <Flex align="center" gap="2">
+                <Box>
+                  <Input
+                    name="trackertime1"
+                    onChange={handleChange}
+                    type="text"
+                    placeholder="23:16"
+                  />
+                </Box>
+                <Box>-</Box>
+                <Box>
+                  <Input
+                    name="trackertime2"
+                    onChange={handleChange}
+                    type="text"
+                    placeholder="23:16"
+                  />
+                </Box>
+              </Flex>
+              <DatePicker
+                selected={datepicker}
+                style={{ width: "2px" }}
+                onChange={(date) => setDatepicker(date)}
+              />
+            </Flex>
+            <Input
+              w="20%"
+              name="trackertime3"
+              onChange={handleChange}
+              type="text"
+              placeholder="0:00:00"
+            />
+            <Button bgColor="#03a9f4" color="#fff" type="submit">
+              ADD
+            </Button>
+
+            <Box>
+              <Button
+                size="xs"
+                variant="transparent"
+                onClick={() => setToggleTimer(false)}
+              >
+                <Image src={timerClock} alt="clock" />
+              </Button>
+              <Button
+                size="xs"
+                variant="transparent"
+                onClick={() => setToggleTimer(true)}
+              >
+                <Image src={list} alt="clock" />
+              </Button>
+            </Box>
+          </Flex>
+        </form>
+
+        <Box>
+          <Box w="97%" minH="80vh" m="auto" display="grid" position="center">
+            <EmptyBox />
+          </Box>
+          {/* <TrackerShower/> */}
+        </Box>
+>>>>>>> master
       </Box>
     </>
   );
