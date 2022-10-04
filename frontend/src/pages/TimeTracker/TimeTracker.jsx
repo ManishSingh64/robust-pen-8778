@@ -13,8 +13,8 @@ import {
 } from "@chakra-ui/react";
 
 import { TbCurrencyDollar } from "react-icons/tb";
-import { EmptyBox } from "../../components/timeTracker/EmptyBox";
-import { TrackerShower } from "../../components/timeTracker/TrackerShower";
+import { EmptyBox } from "../../components/timetracker/EmptyBox";
+import { TrackerShower } from "../../components/timetracker/TrackerShower";
 import { useDispatch, useSelector } from "react-redux";
 import {
   getTrackerAPI,
